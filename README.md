@@ -12,7 +12,7 @@ All prompts are answered according to whatever is selected.
 When the user generates the password, it is written to the page.
 
 
-# Source: https://github.com/leecstevens/bc-03-password-generator
+## Source: https://github.com/leecstevens/bc-03-password-generator
 
 
 
