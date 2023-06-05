@@ -15,28 +15,6 @@ When the user generates the password, it is written to the page.
 ## Source: https://github.com/leecstevens/bc-03-password-generator
 
 
-
-## Table of contents
-
-Use for instance <https://github.com/ekalinin/github-markdown-toc>:
-
-> * [Title / javascript-hw](#javascript-hw)
->   * [About / Source](#about--Source)
->   * [Table of contents](#table-of-contents)
->   * [Files Used](files Used)
->     * [Screenshots](#screenshots)
->     * [Features](#features)
->   * [Code](#code)
->     * [Content](#content)
->     * [Requirements](#requirements)
->     * [Limitations](#limitations)
->     * [Build](#build)
->     * [Deploy (how to install build product)](#deploy-how-to-install-build-product)
->   * [Resources (Documentation and other links)](#resources-documentation-and-other-links)
->   * [Contributing / Reporting issues](#contributing--reporting-issues)
->   * [License](#license)
->   * [About Nuxeo](#about-nuxeo)
-
 ## Files Used
 * Script.js, Index.htnml, Style.css
 
