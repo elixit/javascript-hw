@@ -23,7 +23,7 @@ Use for instance <https://github.com/ekalinin/github-markdown-toc>:
 > * [Title / javascript-hw](#javascript-hw)
 >   * [About / Source](#about--Source)
 >   * [Table of contents](#table-of-contents)
->   * [Files Used](#Files Used)
+>   * [Files Used](files Used)
 >     * [Screenshots](#screenshots)
 >     * [Features](#features)
 >   * [Code](#code)
