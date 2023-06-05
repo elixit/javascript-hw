@@ -21,6 +21,7 @@ When the user generates the password, it is written to the page.
 
 ### Screenshots
 
+![Image 6-5-23 at 1 29 PM](https://github.com/elixit/javascript-hw/assets/63372291/9aaf608e-4ef0-4734-a053-158d55c241ff)
 
 ### Features
 
