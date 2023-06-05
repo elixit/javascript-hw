@@ -2,11 +2,11 @@
 
 ## About
 
-* The goal of this webpage is to randomly generate a password that meets certain criteria
+* The goal of this webpage is to randomly generate a password that meets certain criteria.
 A new, secured password must be generated.
 If the button is clicked, it generates a password and the user is shown prompts for the password criteria.
 The criteria is "special, numeric, upper, lower".
-at least 8 characters and no more than 128 characters are allowed, so the arrow keys allow for a certain amount.
+At least 8 characters and no more than 128 characters are allowed, so the arrow keys allow for a certain amount.
 Another requirement is, it should be validated and at least one character type should be selected in the box.
 All prompts are answered according to whatever is selected.
 When the user generates the password, it is written to the page.
@@ -21,10 +21,9 @@ Source: https://github.com/leecstevens/bc-03-password-generator
 Use for instance <https://github.com/ekalinin/github-markdown-toc>:
 
 > * [Title / javascript-hw](#javascript-hw)
->   * [About / ](#about--synopsis)
+>   * [About / Source](#about--synopsis)
 >   * [Table of contents](#table-of-contents)
->   * [Installation](#installation)
->   * [Usage](#usage)
+>   * [Files Used](#Files Used)
 >     * [Screenshots](#screenshots)
 >     * [Features](#features)
 >   * [Code](#code)
@@ -38,16 +37,12 @@ Use for instance <https://github.com/ekalinin/github-markdown-toc>:
 >   * [License](#license)
 >   * [About Nuxeo](#about-nuxeo)
 
-## Installation
+## Files Used
+* Script.js, Index.htnml, Style.css
 
-Sample:
-
-* From the Nuxeo Marketplace: install [the Sample Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample).
-* From the command line: `nuxeoctl mp-install nuxeo-sample`
-
-## Usage
 
 ### Screenshots
+
 
 ### Features
 
