@@ -1,124 +1,75 @@
-
-
-password_box = document.getElementById("password") // get element by id method returns the element object that matches specific string  
-
-length = document.getElementById("length")  
-add_upper = document.getElementById("upper")  
-add_lower = document.getElementById("lower")
-add_number = document.getElementById("numeric")
-add_special = document.getElementById("special")
-
-/*
-let char_maps creates a character map from the string
-upper, lower, numeric, and special signify the type of password we can filter
-*/
-
-let char_maps = {
-  "upper": {width: 26, start: 65},
-  "lower": {width: 26, start: 97},
-  "numeric": {width: 10, start: 48},
-  "special": {width: 15, start: 33}
-}
-
-/* 
-let variable pw_criteria assigned to array "types"
-*/
-let pw_criteria = Array.from(document.getElementsByName("types"))
-
-// 
-
-function return_string (howmany,chartype) {
-/*
-return statement will stop the function from executing and returns a value.
-*/
-
-  let map = char_maps[chartype] //chartype defines the array
-  let tmp_string = "";
-    for (let i = 0; i < howmany; i++) {
-      tmp_string += String.fromCharCode(Math.floor(Math.random()*map.width)+map.start);
-    }  //  before the loop starts, i = 0 sets the variable - the condition of the loop is defined with i <, i++ increases value everytime loop executes, for loop created to run same code over again
-  return tmp_string
-  }
-
-function scramble_string(incoming_string) {
-
-  
-
-  const tmp_array = [...incoming_string] // const variables can't be reassigned
-  const length = tmp_array.length  // length property sets or returns number of elements in array
-
-  for (let start = 0; start < length; start++) {
-    
-    const randomPosition = Math.floor((tmp_array.length - start) * Math.random()) 
-    const randomItem = tmp_array.splice(randomPosition, 1)
-    tmp_array.push(...randomItem) 
-  }
-    return tmp_array.join("") 
-  }
-
-function num_criteria_checked() {
-  
-  let i = 0;
-  pw_criteria.forEach(element => {
-    if (element.checked) {
-      i++
-    }
-  })
-  return i 
-}
-
-function generatePassword() {
-  let new_password = '';  
-  let types = [];  
-  total = +length.value 
-  pw_criteria.forEach(element => {
-    if (element.checked) {
-      
-      types.push(element.id)
-    }
-  })
-
-  let howmany = Math.floor(+length.value/types.length)
-  types.forEach(element => {
-     
-      new_password += return_string(howmany,element)
-    }
-    )
-    
-   
-    if (+length.value % types.length > 0 ) {
-      
-      if (types.includes("lower")) {
-        extra = "lower"
-      } else {
-        extra = types[0] //This Grabs the first in the array.
-      }
-      new_password += return_string(+length.value % types.length,extra)
-    }
-  
-
-  
-
-  return scramble_string(new_password.split(""));  
-}
-
-
 var generateBtn = document.querySelector("#generate");
 
-// 
-function writePassword() {
-/* allows to write password
 
-*/
-if (num_criteria_checked() > 0) {
-  
-  let password = generatePassword(); 
-  password_box.innerText = password; 
-} else {
-  
-  password_box.innerText = "You need to select at least one of upper, lower, numeric, special.";
+    function genPass() {
+    
+
+    var choose = ""
+    var randomPass = ""
+    var lowerC = "abcdefghijklmnopqrstuvwxyz"
+    var upperC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    var numbers = "0123456789"
+    var special = "!@#$_,.;%^&*()-=+<>?/|':[]{}~"
+    
+    
+
+    var characterLength = prompt(
+        "Enter 8 to 128 characters"
+    );
+    
+
+    if (characterLength < 8 || characterLength > 128 || isNaN(characterLength)) { //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
+                
+        return;
+
+
+    } else {
+    var upperCase = confirm("Do you only want SOME UPPERCASE characters? If yes, click 'ok");
+    if (window.confirm("some Uppercase letters will be added to your password - continue?"));
+    var onlyUpper = confirm("Do you want ONLY UPPERCASE characters? If yes, click 'ok' and cancel the following prompts");
+    var lowerCase = confirm("Do you want some Lowercase letters will be added to your password - continue?");
+    if (window.confirm("some Lowercase letters will be added to your password"));
+    var onlyLower = confirm("Do you want ONLY LOWERCASE characters?");
+    if (window.confirm("Only Lowercase letters will be displayed, click 'OK' and cancel the following prompts"));
+    var numbersOptions = confirm("Do you want Your password to contain SOME numbers? click ok to continue");
+    if (window.confirm("only some numbers will be included"));
+    var onlyNumber = confirm("Do you want ONLY NUMBERS to be displayed?");
+    if (window.confirm("If you only want numbers included, click 'ok' and cancel the following prompts"));
+    var specialChar = confirm("Your password will contain a variety of Special characters, click ok to continue");
+    if (window.confirm("Some special characters will be included"));
+    var onlySpecial = confirm("Only special characters will be displayed");
+    
+    }
+
+    if (upperCase) {choose += upperC;}
+    if (onlyUpper){choose = upperC;}
+    if (onlyLower){choose = lowerC;}
+    if (lowerCase) {choose += lowerC;}
+    if (numbersOptions) {choose += numbers;}
+    if (onlyNumber){choose = numbers}
+    if (specialChar) {choose += special;}
+    if (onlySpecial){choose = special}
+
+
+    for (i = 0; i < characterLength; i++) {
+
+        randomPass += choose[Math.floor(Math.random() * choose.length)]
+    }
+    return(randomPass);
 }
+
+
+    var passwordText = document.querySelector("#password");
+    function writePassword(randomPass) {
+    if (password.length === 0) {
+        return;
+    }
+    
+    passwordText.value = randomPass;
+    navigator.clipboard.randomPass("copied");
+    
 }
 
+    generateBtn.addEventListener("click", function () { writePassword(genPass()) });
 
-generateBtn.addEventListener("click", writePassword);
+    

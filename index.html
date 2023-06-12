@@ -15,26 +15,12 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
-          <h3>Options</h3>
-          
-          <label for="length">Password Length: </label>
-          <input type="number" id="length" min="8" max="128" value="14" onKeyDown="return false">
-          <h3>Include</h3>
-          <p>Check at least one or live dangerously and check them all.  :)</p>
-          <label for="upper">Upper</label>
-          <input type="checkbox" name="types" id="upper" checked />
-          <label for="lower">Lower</label>
-          <input type="checkbox" name="types" id="lower" checked />
-          <label for="numeric">Numeric</label>
-          <input type="checkbox" name="types" id="numeric" checked />
-          <label for="special">Special</label>
-          <input type="checkbox" name="types" id="special" checked />
-          
         </div>
         <div class="card-body">
           <textarea
-            readonly id="password"
-            placeholder="This is where your password will go."
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
         </div>
